@@ -1,0 +1,18 @@
+spring:
+  batch:
+    job:
+      names: ${job.name:NONE}
+    jdbc:
+      initialize-schema: always
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_batch # url
+    username: je # username
+    password:  # password
+    hikari:
+      auto-commit: true
+      maximum-pool-size: 50
+  jpa:
+    show-sql: true
+server:
+  port: 8090
